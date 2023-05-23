@@ -25,7 +25,7 @@ namespace RunGroups.Service
         }
         public async Task<Club> GetByIdAsync(int id)
         {
-            return await _context.Clubs.FirstOrDefaultAsync(c => c.Id == id);
+            return await _context.Clubs.Include(a => a.Address).FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task<IEnumerable<Club>> GetClubByCity(string city)

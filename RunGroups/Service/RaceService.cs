@@ -25,7 +25,7 @@ namespace RunGroups.Service
         }
         public async Task<Race> GetByIdAsync(int id)
         {
-            return await _context.Races.FirstOrDefaultAsync(c => c.Id == id);
+            return await _context.Races.Include(a => a.Address).FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task<IEnumerable<Race>> GetAllRacesByCity(string city)
