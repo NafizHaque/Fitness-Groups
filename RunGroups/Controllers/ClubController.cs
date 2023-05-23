@@ -22,5 +22,10 @@ namespace RunGroups.Controllers
             Club club = _context.Clubs.Include(a => a.Address).FirstOrDefault(c => c.Id == id);
             return View(club);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }

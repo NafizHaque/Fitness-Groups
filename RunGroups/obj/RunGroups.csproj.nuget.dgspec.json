@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups\\RunGroups.csproj": {}
+    "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups\\RunGroups.csproj": {
+    "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups\\RunGroups.csproj",
+        "projectUniqueName": "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups.csproj",
         "projectName": "RunGroups",
-        "projectPath": "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups\\RunGroups.csproj",
+        "projectPath": "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups.csproj",
         "packagesPath": "C:\\Users\\fizz_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups\\obj\\",
+        "outputPath": "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fizz_\\AppData\\Roaming\\NuGet\\NuGet.Config",
