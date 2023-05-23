@@ -9,53 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RunGroups
 build_property.RootNamespace = RunGroups
-build_property.ProjectDir = C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups\RunGroups\
+build_property.ProjectDir = C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups\RunGroups
+build_property.MSBuildProjectDirectory = C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/Club/Detail.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/Club/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YlxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/Club/Index.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/Club/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/Home/Index.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/Home/Privacy.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/Race/Detail.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/Race/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/Race/Index.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/Race/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/Shared/Error.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/_ViewImports.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/_ViewStart.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/RunGroups/Views/Shared/_Layout.cshtml]
+[C:/Users/fizz_/Documents/GitHub/Fitness-Groups/RunGroups/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sr8v4kq9n4
