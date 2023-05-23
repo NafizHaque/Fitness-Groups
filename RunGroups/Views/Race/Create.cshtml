@@ -1,12 +1,11 @@
-﻿@using RunGroups.DTOs.ClubDTOs;
+﻿@using RunGroups.DTOs.RaceDTOs;
 @using RunGroups.Data.Enums;
-@model ClubDto
+@model RaceDto
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
-
 <form method="post" asp-action="Create" enctype="multipart/form-data">
     <div class="form-group">
         <label asp-for="Title">Title</label>
@@ -17,10 +16,9 @@
         <label asp-for="Description">Description</label>
         <input asp-for="Description" class="form-control" placeholder="Enter Description">
     </div>
-
     <div class="form-group">
-        <label asp-for="ClubCategory">ClubCategory</label>
-        <select asp-for="ClubCategory" asp-items="@Html.GetEnumSelectList<ClubCategory>()" class="form-control">
+        <label asp-for="RaceCategory">RaceCategory</label>
+        <select asp-for="RaceCategory" asp-items="@Html.GetEnumSelectList<RaceCategory>()" class="form-control">
             <option>--Select--</option>
         </select>
     </div>

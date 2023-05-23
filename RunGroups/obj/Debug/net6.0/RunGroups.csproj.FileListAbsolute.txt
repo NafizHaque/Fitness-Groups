@@ -259,3 +259,5 @@ C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups\obj\Debug\net6.0\refint
 C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups\obj\Debug\net6.0\RunGroups.pdb
 C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups\obj\Debug\net6.0\RunGroups.genruntimeconfig.cache
 C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups\obj\Debug\net6.0\ref\RunGroups.dll
+C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups\bin\Debug\net6.0\CloudinaryDotNet.dll
+C:\Users\fizz_\Documents\GitHub\Fitness-Groups\RunGroups\bin\Debug\net6.0\Newtonsoft.Json.dll

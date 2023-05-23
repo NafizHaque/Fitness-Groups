@@ -2,6 +2,7 @@ using RunGroups.Data;
 using Microsoft.EntityFrameworkCore;
 using RunGroups.Interfaces;
 using RunGroups.Service;
+using RunGroups.Helpers;
 
 namespace RunGroups
 {
@@ -15,6 +16,9 @@ namespace RunGroups
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<IClubService, ClubService>();
             builder.Services.AddScoped<IRaceService, RaceService>();
+            builder.Services.AddScoped<IPhotoService, PhotoService>();
+
+            builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
