@@ -1,0 +1,50 @@
+﻿@using RunGroups.Data.Enums;
+@model Club
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form>
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title" class="form-control" placeholder="Enter Title">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control" placeholder="Enter Description">
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control" placeholder="Enter Description">
+    </div>
+    <div class="form-group">
+        <label asp-for="ClubCategory">ClubCategory</label>
+        <select asp-for="ClubCategory" asp-items="@Html.GetEnumSelectList<ClubCategory>()" class="form-control">
+            <option>--Select--</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Image">Image</label>
+        <input asp-for="Image" class="form-control" placeholder="Enter Image">
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.AddressLine">Street</label>
+        <input asp-for="Address.AddressLine" class="form-control" placeholder="Enter Street">
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.City">City</label>
+        <input asp-for="Address.City" class="form-control" placeholder="Enter City">
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.Country">Country</label>
+        <input asp-for="Address.Country" class="form-control" placeholder="Enter Country">
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.Postcode">Post Code</label>
+        <input asp-for="Address.Postcode" class="form-control" placeholder="Enter Post Code">
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top:1rem">Submit</button>
+</form>
