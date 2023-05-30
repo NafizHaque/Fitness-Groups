@@ -1,17 +1,17 @@
 ﻿using RunGroups.Data.Enums;
 using RunGroups.Models;
 
-namespace RunGroups.DTOs.ClubDTOs
+namespace RunGroups.DTOs.RaceDTOs
 {
-    public class EditClubDto
+    public class EditRaceDto
     {
         public int Id { get; set; }
         public string? Title { get; set; }
         public string? Description { get; set; }
-        public int? AddressId  { get; set; }
+        public int? AddressId { get; set; }
         public Address Address { get; set; }
-        public  IFormFile? Image { get; set; }
+        public IFormFile? Image { get; set; }
         public string? URL { get; set; }
-        public ClubCategory ClubCategory { get; set; }
+        public RaceCategory RaceCategory { get; set; }
     }
 }

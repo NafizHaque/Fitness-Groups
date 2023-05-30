@@ -1,0 +1,52 @@
+﻿@using RunGroups.DTOs.RaceDTOs;
+@using RunGroups.Data.Enums;
+@model EditRaceDto
+
+<form method="post" asp-action="Edit" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="hidden" asp-for="AddressId" class="form-control" placeholder="AddressId">
+    </div>
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title" class="form-control" placeholder="Title">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control" placeholder="Description">
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RaceCategory">Club Category</label>
+        <select asp-for="RaceCategory" asp-items="@Html.GetEnumSelectList<RaceCategory>()" class="form-control">
+            <option selected="selected" value="">--Select--</option>
+        </select>
+        <span asp-validation-for="RaceCategory" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.AddressLine">Street</label>
+        <input asp-for="Address.AddressLine" class="form-control" placeholder="Street">
+        <span asp-validation-for="Address.AddressLine" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.City">City</label>
+        <input asp-for="Address.City" class="form-control" placeholder="City">
+        <span asp-validation-for="Address.City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.Country">State</label>
+        <input asp-for="Address.Country" class="form-control" placeholder="Street">
+        <span asp-validation-for="Address.Country" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.Postcode">Post Code</label>
+        <input asp-for="Address.Postcode" class="form-control" placeholder="Enter Post Code">
+    </div>
+    <div class="form-group">
+        <label asp-for="Image">Image</label>
+        <input asp-for="Image" type="file" class="form-control" placeholder="Image">
+        <span asp-validation-for="Image" class="text-danger"></span>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
