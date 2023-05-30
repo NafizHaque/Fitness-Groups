@@ -3,12 +3,15 @@ using Microsoft.EntityFrameworkCore;
 using RunGroups.Interfaces;
 using RunGroups.Service;
 using RunGroups.Helpers;
+using RunGroups.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace RunGroups
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -23,12 +26,18 @@ namespace RunGroups
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+            builder.Services.AddIdentity<AppUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+            builder.Services.AddMemoryCache();
+            builder.Services.AddSession();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie();
 
             var app = builder.Build();
 
             if (args.Length ==1 && args[0].ToLower() == "seeddata")
             {
-                Seeding.SeedData(app);
+                await Seeding.SeedUsersAndRolesAsync(app);
             }
 
 

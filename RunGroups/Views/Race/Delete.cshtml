@@ -1,0 +1,53 @@
+﻿
+@using RunGroups.Data.Enums;
+@model Race
+
+<h1> Are you sure you want to delete club </h1>
+<form method="post" asp-action="Delete" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="hidden" asp-for="AddressId" class="form-control" placeholder="AddressId">
+    </div>
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title" class="form-control" placeholder="Title">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control" placeholder="Description">
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RaceCategory">Club Category</label>
+        <select asp-for="RaceCategory" asp-items="@Html.GetEnumSelectList<RaceCategory>()" class="form-control">
+            <option selected="selected" value="">--Select--</option>
+        </select>
+        <span asp-validation-for="RaceCategory" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.AddressLine">Street</label>
+        <input asp-for="Address.AddressLine" class="form-control" placeholder="Street">
+        <span asp-validation-for="Address.AddressLine" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.City">City</label>
+        <input asp-for="Address.City" class="form-control" placeholder="City">
+        <span asp-validation-for="Address.City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.Country">State</label>
+        <input asp-for="Address.Country" class="form-control" placeholder="Street">
+        <span asp-validation-for="Address.Country" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.Postcode">Post Code</label>
+        <input asp-for="Address.Postcode" class="form-control" placeholder="Enter Post Code">
+    </div>
+
+</form>
+<div class="form-group">
+    <form action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

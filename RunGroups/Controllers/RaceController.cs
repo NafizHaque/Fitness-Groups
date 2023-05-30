@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RunGroups.Data;
+using RunGroups.DTOs.ClubDTOs;
 using RunGroups.DTOs.RaceDTOs;
 using RunGroups.Interfaces;
 using RunGroups.Models;
@@ -62,5 +63,79 @@ namespace RunGroups.Controllers
             return View(raceDto);
 
         }
+        public async Task<IActionResult> Edit(int id)
+        {
+            Race race = await _raceService.GetByIdAsync(id);
+            if (race == null) return View("Error");
+            EditRaceDto raceDto = new EditRaceDto
+            {
+                Title = race.Title,
+                Description = race.Description,
+                AddressId = race.AddressId,
+                Address = race.Address,
+                URL = race.Image,
+                RaceCategory = race.RaceCategory
+            };
+            return View(raceDto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, EditClubDto raceDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "failed to edit club");
+                return View("Edit", raceDto);
+            }
+            Race userRace = await _raceService.GetByIdAsyncNoTracking(id);
+            if (userRace != null)
+            {
+                try
+                {
+                    await _photoService.DeletePhotoAsync(userRace.Image);
+
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", "Could not delete photo");
+                    return View(raceDto);
+                }
+                ImageUploadResult photoResult = await _photoService.AddPhotoAsync(raceDto.Image);
+
+                Race race = new Race
+                {
+                    Id = id,
+                    Title = raceDto.Title,
+                    Description = raceDto.Description,
+                    Image = photoResult.Url.ToString(),
+                    AddressId = raceDto.AddressId,
+                    Address = raceDto.Address,
+                };
+
+                _raceService.Update(race);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(raceDto);
+            }
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            Race race = await _raceService.GetByIdAsync(id);
+            if (race == null) { return View("Error"); }
+            return View(race);
+
+        }
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteRequest(int id)
+        {
+            Race raceDeletion = await _raceService.GetByIdAsync(id);
+            if (raceDeletion == null) { return View("Error"); }
+            _raceService.Delete(raceDeletion);
+            return RedirectToAction("Index");
+
+        }
+
     }
 }
