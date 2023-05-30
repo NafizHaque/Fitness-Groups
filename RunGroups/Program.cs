@@ -11,7 +11,7 @@ namespace RunGroups
 {
     public class Program
     {
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +37,7 @@ namespace RunGroups
 
             if (args.Length ==1 && args[0].ToLower() == "seeddata")
             {
-                await Seeding.SeedUsersAndRolesAsync(app);
+                //await Seeding.SeedUsersAndRolesAsync(app);
             }
 
 
@@ -51,9 +51,8 @@ namespace RunGroups
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
