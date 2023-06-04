@@ -11,7 +11,7 @@ namespace RunGroups
 {
     public class Program
     {
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +20,7 @@ namespace RunGroups
             builder.Services.AddScoped<IClubService, ClubService>();
             builder.Services.AddScoped<IRaceService, RaceService>();
             builder.Services.AddScoped<IPhotoService, PhotoService>();
+            builder.Services.AddScoped<IDashboardService, DashboardService>();
 
             builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -37,7 +38,7 @@ namespace RunGroups
 
             if (args.Length ==1 && args[0].ToLower() == "seeddata")
             {
-                await Seeding.SeedUsersAndRolesAsync(app);
+                //await Seeding.SeedUsersAndRolesAsync(app);
             }
 
 
@@ -51,9 +52,8 @@ namespace RunGroups
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dvGKBXr8W4VoaTCE60vMoaxCIrmA5DZ6jPqpbmNv91GDWHXR+zHYIpbZIRn36JpqsgImX2lb2YgAXzdHeC3Fyw==",
+  "dgSpecHash": "2KotG0cXgjyb8yTBmfctwQtnkLVEk/qvJdFBfRQWXKi3i+INMCtHwVgtl91dmFuksa8eYgNh/0EFqJjuusYhvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\Rungroups\\RunGroups.csproj",
+  "projectFilePath": "C:\\Users\\fizz_\\Documents\\GitHub\\Fitness-Groups\\RunGroups\\RunGroups.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fizz_\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\fizz_\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
