@@ -20,6 +20,7 @@ namespace RunGroups
             builder.Services.AddScoped<IClubService, ClubService>();
             builder.Services.AddScoped<IRaceService, RaceService>();
             builder.Services.AddScoped<IPhotoService, PhotoService>();
+            builder.Services.AddScoped<IDashboardService, DashboardService>();
 
             builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
