@@ -4,8 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using RunGroups.Data;
 using RunGroups.DTOs.ClubDTOs;
 using RunGroups.Interfaces;
+using RunGroups.Migrations;
 using RunGroups.Models;
 using System.Diagnostics.Eventing.Reader;
+using System.Security.Claims;
 
 namespace RunGroups.Controllers
 {
@@ -13,10 +15,12 @@ namespace RunGroups.Controllers
     {
         private readonly IClubService _clubService;
         private readonly IPhotoService _photoService;
-        public ClubController(IClubService clubService, IPhotoService photoService)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public ClubController(IClubService clubService, IPhotoService photoService, IHttpContextAccessor httpContextAccessor)
         {
             _clubService = clubService;
             _photoService = photoService;
+            _httpContextAccessor = httpContextAccessor;
         }
         public async Task<IActionResult> Index()
         {
@@ -29,7 +33,12 @@ namespace RunGroups.Controllers
             return View(club);
         }
 
-        public IActionResult Create() { return View(); }
+        public IActionResult Create()
+        {
+            string currentUserId = _httpContextAccessor.HttpContext.User.GetUserId();
+            var clubDto = new ClubDto { AppUserId = currentUserId };
+            return View(clubDto); 
+        }
 
         [HttpPost]
         public async Task<IActionResult> Create(ClubDto clubDto)
@@ -42,6 +51,7 @@ namespace RunGroups.Controllers
                     Title = clubDto.Title,
                     Description = clubDto.Description,
                     Image = result.Url.ToString(),
+                    AppUserId = clubDto.AppUserId,
                     Address = new Address
                     {
                         AddressLine = clubDto.Address.AddressLine,

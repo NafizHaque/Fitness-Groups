@@ -17,14 +17,14 @@ namespace RunGroups.Service
         }
         public async Task<List<Race>> GetAllUserRaces()
         {
-            ClaimsPrincipal currentUser = _httpContextAccessor.HttpContext?.User;
-            IQueryable<Race> userRaces = _context.Races.Where(r => r.AppUser.Id == currentUser.ToString());
+            string currentUser = _httpContextAccessor.HttpContext?.User.GetUserId();
+            IQueryable<Race> userRaces = _context.Races.Where(r => r.AppUser.Id == currentUser);
             return userRaces.ToList();  
         }
         public async Task<List<Club>> GetAllUserClubs()
         {
-            ClaimsPrincipal currentUser = _httpContextAccessor.HttpContext?.User;
-            IQueryable<Club> userClubs = _context.Clubs.Where(r => r.AppUser.Id == currentUser.ToString());
+            string currentUser = _httpContextAccessor.HttpContext?.User.GetUserId();
+            IQueryable<Club> userClubs = _context.Clubs.Where(r => r.AppUser.Id == currentUser);
             return userClubs.ToList();
         }
     }
